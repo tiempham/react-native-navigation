@@ -235,13 +235,13 @@ public class SingleScreenLayout extends BaseLayout {
 
     @Override
     public void showSnackbar(SnackbarParams params) {
-        final String navigatorEventId = stack.peek().getNavigatorEventId();
-        snackbarAndFabContainer.showSnackbar(navigatorEventId, params);
+       // final String navigatorEventId = stack.peek().getNavigatorEventId();
+      //  snackbarAndFabContainer.showSnackbar(navigatorEventId, params);
     }
 
     @Override
     public void dismissSnackbar() {
-        snackbarAndFabContainer.dismissSnackbar();
+      //  snackbarAndFabContainer.dismissSnackbar();
     }
 
     @Override
