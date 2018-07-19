@@ -160,6 +160,7 @@ If you have any **react-native** related methods, you can safely delete them.
 	
 ```java
 import com.reactnativenavigation.NavigationApplication;
+import com.reactnativenavigation.react.NavigationReactNativeHost;
 
 public class MainApplication extends NavigationApplication {
 	@Override
@@ -172,6 +173,16 @@ public class MainApplication extends NavigationApplication {
 		return Arrays.<ReactPackage>asList(
 			// eg. new VectorIconsPackage()
 		);
+	}
+	@Override
+	  protected ReactNativeHost createReactNativeHost() {
+	    return new NavigationReactNativeHost(this) {
+	      @Override
+	      protected String getJSMainModuleName() {
+		return "index";
+	      }
+
+	    };
 	}
 }
 ```
